@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dragon + Fluids</title>
+  <style>
+    html, body { margin:0; height:100%; background:#000; overflow:hidden; }
+    #fluidCanvas, #dragonCanvas {
+      position:fixed; inset:0; width:100vw; height:100vh; display:block;
+    }
+    /* el fluido recibe eventos; el dragón no intercepta el mouse */
+    #fluidCanvas { z-index:0; pointer-events:auto; }
+    #dragonCanvas { z-index:1; pointer-events:none; }
+  </style>
+</head>
+<body>
+  <canvas id="fluidCanvas"></canvas>
+  <canvas id="dragonCanvas"></canvas>
+
+  <script src="fluids.js"></script>
+  <script src="dragon.js"></script>
+</body>
+</html>
